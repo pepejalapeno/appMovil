@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button block icon-left (tap)="buscarUbicacion()" color="accent-color" round>
+          <ion-icon name = "ios-locate"></ion-icon>
+          Conocer mi ubicación
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="18">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+</ion-content>
